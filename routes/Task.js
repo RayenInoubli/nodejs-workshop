@@ -8,14 +8,14 @@ import {
 } from "../controllers/Task.js";
 const router = express.Router();
 
-router.get("/api/tasks");
+router.get("/", getTasks);
 
-router.get("/api/tasks/:id");
+router.get("/:id", getTask);
 
-router.post("/api/tasks/");
+router.post("/", createTask);
 
-router.patch("/api/tasks/:id");
+router.patch("/:id", updateTask);
 
-router.delete("/api/tasks/:id");
+router.delete("/:id", deleteTask);
 
 export default router;
